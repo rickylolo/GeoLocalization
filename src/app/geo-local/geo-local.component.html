@@ -1,0 +1,9 @@
+<div *ngIf="latitude && longitude">
+
+    <p>Latitud: {{ latitude }}</p>
+    <p>Longitud: {{ longitude }}</p>
+</div>
+
+<google-map height="500px" width="900px" [center]="center" [zoom]="zoom" (mapClick)="moveMap($event)">
+    <map-marker [position]="center"></map-marker>
+</google-map>
